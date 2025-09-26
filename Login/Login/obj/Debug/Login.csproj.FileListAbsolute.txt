@@ -9,3 +9,5 @@ C:\Users\rente\source\repos\Login\Login\obj\Debug\Login.csproj.CoreCompileInputs
 C:\Users\rente\source\repos\Login\Login\obj\Debug\Login.exe
 C:\Users\rente\source\repos\Login\Login\obj\Debug\Login.pdb
 C:\Users\rente\source\repos\Login\Login\obj\Debug\Login.exe.config
+C:\Users\rente\source\repos\Login\Login\obj\Debug\Login.Registro.resources
+C:\Users\rente\source\repos\Login\Login\obj\Debug\Login.Datos.resources

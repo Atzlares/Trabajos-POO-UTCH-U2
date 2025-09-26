@@ -12,11 +12,18 @@ namespace Login
 {
     public partial class Form1 : Form
     {
-        
+
+        List<Usuario> Usuario1 = new List<Usuario>();
 
         public Form1()
         {
             InitializeComponent();
+            Usuario1.Add(new Usuario("Axel", "Lares", "atzl", "123", "19","admin"));
+            Usuario1.Add(new Usuario("Jorge", "Lares", "fritos", "123", "19","user"));
+            Usuario1.Add(new Usuario("Melany", "Lares", "atzl", "123", "19","user"));
+
+
+
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -26,20 +33,41 @@ namespace Login
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string userC = "Axel";
-            string contraC = "atzl";
-            
-            if (textBox1.Text == userC && textBox2.Text == contraC)
+
+            for (int i = 0; i < 3; i = i + 1)
             {
-                MessageBox.Show("Inicio de sesión exitoso");
-                this.Hide();
-                Form1 form1 = new Form1();
-                form1.Show();
+                if (textBox1.Text == Usuario1[i].NomUs && textBox2.Text == Usuario1[i].Contra)
+                {
+                    if (Usuario1[i].Nivel == "admin")
+                    {
+                        MessageBox.Show("Bienvenido admin " + Usuario1[i].Nombre);
+                    }
+                    else
+                    {
+                        MessageBox.Show("No eres bienvenido " + Usuario1[i].Nombre);
+                    }
+                        MessageBox.Show("Usuario correcto. Bienvenido: " + Usuario1[1].Nombre);
+                    
+
+
+                }
+                else
+                {
+                    MessageBox.Show("Credenciales incorrecta");
+                }
+
             }
-            else
-            {
-                MessageBox.Show("Usuario o contraseña incorrectos");
+                
             }
+        
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+            Registro registro = new Registro();
+            registro.Show();
+            this.Hide();
+
         }
     }
 }
